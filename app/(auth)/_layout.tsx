@@ -1,6 +1,6 @@
 
-import { useAuth } from '@clerk/clerk-expo';
 import { Redirect, Stack } from 'expo-router'
+import { useAuth } from '@clerk/clerk-expo'
 
 const Layout = () => {
     const { isSignedIn } = useAuth()

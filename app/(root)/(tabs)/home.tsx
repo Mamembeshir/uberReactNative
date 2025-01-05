@@ -6,21 +6,18 @@ export default function Page() {
     const { user } = useUser()
 
     return (
-        <SafeAreaView>
-            <View>
-                <Text>hf</Text>
-                <SignedIn>
-                    <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
-                </SignedIn>
-                <SignedOut>
-                    <Link href="/(auth)/sign-in">
-                        <Text>Sign in</Text>
-                    </Link>
-                    <Link href="/(auth)/sign-up">
-                        <Text>Sign up</Text>
-                    </Link>
-                </SignedOut>
-            </View>
-        </SafeAreaView>
+        <View className='my-24'>
+            <SignedIn>
+                <Text>Hello {user?.emailAddresses[0].emailAddress}</Text>
+            </SignedIn>
+            <SignedOut>
+                <Link href="/(auth)/sign-in">
+                    <Text>Sign in</Text>
+                </Link>
+                <Link href="/(auth)/sign-up">
+                    <Text>Sign up</Text>
+                </Link>
+            </SignedOut>
+        </View>
     )
 }
